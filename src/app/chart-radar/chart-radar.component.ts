@@ -31,8 +31,21 @@ export class ChartRadarComponent implements OnInit {
         weight : 'bolder'
       },
       borderRadius: 15,
-      color : 'white',
+      color : 'black',
       //display : 'auto',
+      //anchor : 'center',
+      align : 'right',
+      offset: 15,
+      anchor : function(context){
+        
+        const p = context.datasetIndex;
+        if (p == 0 ){
+          return 'end';
+        } else {
+          return 'start';
+        }
+
+      }
     },
     tooltip: {
       //enabled : false,
